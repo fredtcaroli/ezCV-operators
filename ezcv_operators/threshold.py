@@ -48,7 +48,7 @@ class AdaptiveThreshold(Operator):
         default_value="ADAPTIVE_THRESH_MEAN_C"
     )
     max_value = IntegerParameter(default_value=255, lower=0, upper=255)
-    block_size = IntegerParameter(default_value=9, lower=1, upper=50, step_size=2)
+    block_size = IntegerParameter(default_value=9, lower=3, upper=50, step_size=2)
     C = IntegerParameter(default_value=5, lower=1, upper=50)
 
     def run(self, img: Image, ctx: PipelineContext) -> Image:
