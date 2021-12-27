@@ -1,7 +1,6 @@
 import cv2
 
-from ezcv.operator import register_operator
-from ezcv.operator.core import Operator, IntegerParameter, DoubleParameter
+from ezcv.operator import register_operator, Operator, IntegerParameter, DoubleParameter
 from ezcv.pipeline import PipelineContext
 from ezcv.typing import Image
 
