@@ -6,6 +6,7 @@ authors = ["Frederico Tommasi Caroli <fredtcaroli@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7,<3.11"
+ezcv = { git = "https://github.com/fredtcaroli/ezCV" }
 
 [tool.poetry.dev-dependencies]
 
