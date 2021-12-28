@@ -11,6 +11,7 @@ from ezcv.utils import is_image
 from ezcv_operators.blur import GaussianBlur
 from ezcv_operators.clahe import CLAHE
 from ezcv_operators.color_space import ColorSpaceChange
+from ezcv_operators.contours import FindContours
 from ezcv_operators.threshold import SimpleThreshold, AdaptiveThreshold
 
 
@@ -96,5 +97,15 @@ def test_adaptive_threshold(
     op.max_value = max_value
     op.block_size = block_size
     op.C = C
+    r = run_operator(op, img)
+    assert is_image(r)
+
+
+@hypothesis.given(**make_hypothesis_parameters(FindContours))
+@parametrize_img(gray_only=True)
+def test_find_contours(mode: str, method: str, img: Image):
+    op = FindContours()
+    op.mode = mode
+    op.method = method
     r = run_operator(op, img)
     assert is_image(r)

@@ -54,7 +54,7 @@ PyYAML = "^6.0"
 type = "git"
 url = "https://github.com/fredtcaroli/ezCV"
 reference = "master"
-resolved_reference = "d6528307be0ba21659416b618a99bd132a101b6a"
+resolved_reference = "9457cd8f47c46e5334d3aa709ecc09636dd135fc"
 
 [[package]]
 name = "hypothesis"
